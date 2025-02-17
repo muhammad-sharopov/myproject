@@ -62,7 +62,7 @@ with st.expander('Input Features'):
   st.write('**Combuned penguins data** (input row + original data)')
   st.dataframe(input_penguins)
 encode = ['island', 'sex']
-df_penguins = pg.get_dummies(input_penguins, profix=encode)
+df_penguins = pd.get_dummies(input_penguins, profix=encode)
 
 X = df_penguins[1:]
 input_row = df_penguins[:1]
